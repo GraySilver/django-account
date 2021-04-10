@@ -1,0 +1,6 @@
+{
+  "secret_key": "xxx",
+  "db_name": "account",
+  "db_user":"root",
+  "db_pw": "chenluyao"
+}
