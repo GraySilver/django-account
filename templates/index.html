@@ -69,7 +69,8 @@
                                             {% endfor %}
                                             </select>
                                         </div>
-                                        <input type="text" oninput="value=value.replace(/[^\d.]/g,'')" name="amount" aria-label="Money Amount" placeholder="金额" class="form-control" required="">
+{#                                    replace(/[^\d.]/g,'')#}
+                                        <input type="text" oninput="value=value.replace(/[^0-9+/-/*//]/g,'')" name="amount" aria-label="Money Amount" placeholder="金额" class="form-control" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-7 mb-3">
@@ -170,7 +171,7 @@
                             <div name="search-elements" style="margin: 0px auto;">
                                 <input class="form-control mr-sm-2" type="search" id="search-keyword" placeholder="请输入内容">
                                 <button class="btn btn-info my-2 my-sm-0" id="search-record" type="submit"><i class="fa fa-search" aria-hidden="true">搜索账单</i></button>
-                                <a class="btn btn-info my-2 my-sm-0" href="/accounting" >回到主页</a>
+                                <a class="btn btn-info my-2 my-sm-0" href="/admin" >管理后台</a>
                             </div>
                         </div>
                         <hr width="90%" />

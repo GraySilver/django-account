@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.db.models import Q
 from .models import *
 from .forms import HistoryRecordForm, TransferRecordForm
+from .operator_string import OperatorString
 import datetime, calendar
 import decimal
 
@@ -61,7 +62,7 @@ def index(request):
         'current_month_records': current_month_records,
         'day_income_expense': day_income_expense
                }
-    return render(request, 'accounting/index.html', context)
+    return render(request, 'index.html', context)
 
 
 def retrieve_category(request):
@@ -100,6 +101,7 @@ def record_income_expense(request):
                 category = request.POST.get('category')
                 currency = request.POST.get('currency')
                 amount = request.POST.get('amount')
+                amount = OperatorString().run(_string=str(amount))
                 comment = request.POST.get('comment')
                 time_occur = request.POST.get('time_of_occurrence')
                 history_record = HistoryRecord(account_id=account,

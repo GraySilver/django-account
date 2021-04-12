@@ -1,3 +1,4 @@
+# Python3.7.0
 asgiref==3.3.1
 Django==3.1.4
 #Django==1.11.8
@@ -6,4 +7,5 @@ pytz==2020.5
 sqlparse==0.4.1
 #uWSGI==2.0.19.1
 dj-static==0.0.6
-django-jet
+gunicorn==19.7.1
+static3==0.7.0

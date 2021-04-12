@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_url = '/accounting'
+admin.site.site_url = '/'
 
 urlpatterns = [
-    path('accounting/', include('accounting.urls')),
+    path('', include('accounting.urls')),
     path('admin/', admin.site.urls),
 ]
 
