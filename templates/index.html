@@ -70,7 +70,7 @@
                                             </select>
                                         </div>
 {#                                    replace(/[^\d.]/g,'')#}
-                                        <input type="text" oninput="value=value.replace(/[^0-9+/-/*//]/g,'')" name="amount" aria-label="Money Amount" placeholder="金额" class="form-control" required="">
+                                        <input type="text" oninput="value=value.replace(/[^0-9.+/-/*//]/g,'')" name="amount" aria-label="Money Amount" placeholder="金额" class="form-control" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-7 mb-3">
